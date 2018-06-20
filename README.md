@@ -28,6 +28,6 @@ If you do not use `-c` option, that means the script will search the config file
 
 Some samples:
 
-`ambari_check_service.py -c ../conf/config -s HDFS`
-`ambari_check_service.py -c ../conf/config -s HDFS,YARN`
+`ambari_check_service.py -c ../conf/config -s HDFS`\
+`ambari_check_service.py -c ../conf/config -s HDFS,YARN`\
 `ambari_check_service.py -c ../conf/config`
