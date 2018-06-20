@@ -1,6 +1,6 @@
 # Ambari Service Check python util
 
-You can use this python util to initiate Ambari service checks for selected or all services.
+You can use this python util to initiate Ambari service checks for selected or all services. The API calls are based on this [article](https://community.hortonworks.com/articles/11852/ambari-api-run-all-service-checks-bulk.html).
 
 ## Config
 You can find below a sample config. Please set the permission that only the user who may run this script can read it.
