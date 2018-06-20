@@ -23,8 +23,8 @@ You can specify two option:
 1. config file location with `-c`
 2. list of services you want to check with `-s`, please use only comma to separate the service_names
 
-If you do not use `-s` option, that means the script will check all services
-If you do not use `-c` option, that means the script will search the config file at `../conf/config`
+If you do not use `-s` option, that means the script will check all services.\
+If you do not use `-c` option, that means the script will search the config file at `../conf/config`.
 
 Some samples:
 
