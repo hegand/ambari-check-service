@@ -81,7 +81,7 @@ class AmbariClient(object):
     def check_batch_job(self, id):
         url = self.base_url + "request_schedules/{0}".format(str(id))
         try:
-            resp = [{"service_name": json.loads(req["request_body"])["Requests/resource_filters"][0]["service_name"], "status": req["request_status"]} for req in self.get(url)["RequestSchedule"]["batch"]["batch_requests"]]
+            resp = [{u"service_name": json.loads(req["request_body"])["Requests/resource_filters"][0]["service_name"], u"status": req["request_status"]} for req in self.get(url)["RequestSchedule"]["batch"]["batch_requests"]]
             return resp
         except KeyError as e:
             raise AmbariError("Server response is not valid or empty, please check")
