@@ -3,7 +3,7 @@
 You can use this python util to initiate Ambari service checks for selected or all services.
 
 ## Config
-You can find below a sample config. Please set the permission that only the user who shell run this script can read it.
+You can find below a sample config. Please set the permission that only the user who may run this script can read it.
 
 Sample config:
 
