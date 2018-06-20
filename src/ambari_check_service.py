@@ -68,7 +68,7 @@ def main(argv):
     id = run_all() if not service_name_list else run_list(service_name_list)
     while True:
         status = ac.check_batch_job_status(id)
-        print(status)
+        print("RUNNING..." if status == "SCHEDULED" else status)
         if status != "SCHEDULED":
             print ac.check_batch_job(id)
             break
