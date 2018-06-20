@@ -7,7 +7,7 @@ You can find below a sample config. Please set the permission that only the user
 
 Sample config:
 
-`
+```json
 {
   "hostname": "localhost",
   "port": 8080,
@@ -16,7 +16,7 @@ Sample config:
   "password": "admin",
   "ssl": false
 }
-`
+```
 
 ## Usage
 You can specify two option:
@@ -28,6 +28,8 @@ If you do not use `-c` option, that means the script will search the config file
 
 Some samples:
 
-`ambari_check_service.py -c ../conf/config -s HDFS`\
-`ambari_check_service.py -c ../conf/config -s HDFS,YARN`\
-`ambari_check_service.py -c ../conf/config`
+```shell
+ambari_check_service.py -c ../conf/config -s HDFS
+ambari_check_service.py -c ../conf/config -s HDFS,YARN
+ambari_check_service.py -c ../conf/config
+```
