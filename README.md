@@ -41,5 +41,5 @@ SCHEDULED
 SCHEDULED
 SCHEDULED
 COMPLETED
-[{'status': u'COMPLETED', 'service_name': u'HDFS'}, {'status': u'COMPLETED', 'service_name': u'YARN'}]
+[{u'status': u'COMPLETED', u'service_name': u'HDFS'}, {u'status': u'COMPLETED', 'sservice_name': u'YARN'}]
 ```
