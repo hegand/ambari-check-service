@@ -1,0 +1,2 @@
+class AmbariError(Exception):
+  pass
