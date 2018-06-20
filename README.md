@@ -37,9 +37,9 @@ ambari_check_service.py -c ../conf/config
 ## Output
 ```shell
 $ ambari_check_service.py -c ../conf/config -s HDFS,YARN
-SCHEDULED
-SCHEDULED
-SCHEDULED
+RUNNING...
+RUNNING...
+RUNNING...
 COMPLETED
-[{u'status': u'COMPLETED', u'service_name': u'HDFS'}, {u'status': u'COMPLETED', 'sservice_name': u'YARN'}]
+[{u'status': u'COMPLETED', u'service_name': u'HDFS'}, {u'status': u'COMPLETED', u'service_name': u'YARN'}]
 ```
