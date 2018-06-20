@@ -33,3 +33,13 @@ ambari_check_service.py -c ../conf/config -s HDFS
 ambari_check_service.py -c ../conf/config -s HDFS,YARN
 ambari_check_service.py -c ../conf/config
 ```
+
+## Output
+```shell
+$ ambari_check_service.py -c ../conf/config -s HDFS,YARN
+SCHEDULED
+SCHEDULED
+SCHEDULED
+COMPLETED
+[{'status': u'COMPLETED', 'service_name': u'HDFS'}, {'status': u'COMPLETED', 'service_name': u'YARN'}]
+```
