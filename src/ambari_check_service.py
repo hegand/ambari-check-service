@@ -34,6 +34,12 @@ def print_help():
     print 'test.py -s <services_comma_separeted>'
     print 'test.py -c <config> -s <services_comma_separeted>'
 
+def pretty_print_results(results):
+    print("\nResults:")
+    for result in results:
+        print("{0}: {1}".format(result["service_name"],result["status"]))
+    print("")
+
 def main(argv):
     config_file = "../conf/config"
     service_name_list = ""
@@ -69,11 +75,12 @@ def main(argv):
         exit(1)
 
     id = run_all() if not service_name_list else run_list(service_name_list)
+    print("\nStatus:")
     while True:
         status = ac.check_batch_job_status(id)
         print("RUNNING..." if status == "SCHEDULED" else status)
         if status != "SCHEDULED":
-            print ac.check_batch_job(id)
+            pretty_print_results(ac.check_batch_job(id))
             break
         sleep(15)
 
