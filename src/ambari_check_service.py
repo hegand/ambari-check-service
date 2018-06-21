@@ -64,6 +64,9 @@ def main(argv):
     except KeyError as e:
         print("Config json is not valid, please check")
         exit(1)
+    except AmbariError as e:
+        print(e.message)
+        exit(1)
 
     id = run_all() if not service_name_list else run_list(service_name_list)
     while True:
