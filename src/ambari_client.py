@@ -17,7 +17,7 @@ class AmbariClient(object):
         url = self.base_url[:-len(self.cluster_name)-1]
         data = self.get(url)
         try:
-            cluster_names = map(lambda x: x["Clusters"]["cluster_name"], data["items"])
+            cluster_names = [x["Clusters"]["cluster_name"] for x in data["items"]]
             if self.cluster_name in cluster_names:
                 return
             else:
@@ -46,7 +46,7 @@ class AmbariClient(object):
         url = self.base_url + "services/"
         resp = self.get(url)
         try:
-            return map(lambda x: x["ServiceInfo"]["service_name"], resp["items"])
+            return [x["ServiceInfo"]["service_name"] for x in resp["items"]]
         except KeyError as e:
             raise AmbariError("Server response is not valid or empty, please check")
 
